@@ -1,7 +1,7 @@
 using System;
 
 class Student{
-    internal string DNI = "12345678S";
+    public string DNI = "12345678S";
 
     public string Dni{
         get{return DNI;}
@@ -10,9 +10,9 @@ class Student{
 
 class main{
     public static void Main(string[] args){
-        Student st = new Student();
+        Student st1 = new Student();
 
-        st.DNI = "12123222F";
-        Console.WriteLine(st.Dni);
+        st1.DNI = "estoestamal";
+        Console.WriteLine(st1.Dni);
     }
 }
