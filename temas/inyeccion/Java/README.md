@@ -4,7 +4,7 @@ En este ejemplo, usaremos Java en conjunto a Maven, para crear el proyecto neces
 
 Lo primero es configurar nuestro `pom.xml`:
 
-[pom.xml](pom.xml)
+[pom.xml](main/pom.xml)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -93,7 +93,7 @@ Aquí lo que se debe destacar es la versión de java a utilizar en la compilaci�
 A continuación, creamos nuestro código fuente, que es muy simple en nuestro caso.
 
 ## Ejemplo
-[Main.java](src/main/java/es/uca/iiss/inyeccion/alejandroguitarte/Main.java)
+[Main.java](main/src/main/java/es/uca/iiss/inyeccion/alejandroguitarte/Main.java)
 ```java
 package es.uca.iiss.inyeccion.alejandroguitarte;
 
@@ -117,7 +117,7 @@ public class Main
 ```
 Vemos como tenemos una variable de tipo `Ishape` que es inicializada por Spring, obteniendo la Bean `ShapeType`, con parámetro 2. Esta bean va a instanciar un objeto de la clase `Circle` con radio 2, sin necesidad de incluir el `new Circle(2)` en nuestro código, lo cual generaría acoplamientos innecesarios. Veamos como se define la bean:
 
-[Beans.xml](src/main/java/Beans.xml)
+[Beans.xml](main/src/main/java/Beans.xml)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
@@ -131,7 +131,7 @@ Como podemos ver, se está definiendo la bean con id `ShapeType` que instancia l
 
 Para entender la salida, veremos que hacen el resto de clases:
 
-[IShape.java](src/main/java/es/uca/iiss/inyeccion/alejandroguitarte/IShape.java)
+[IShape.java](main/src/main/java/es/uca/iiss/inyeccion/alejandroguitarte/IShape.java)
 ```java
 package es.uca.iiss.inyeccion.alejandroguitarte;
 
@@ -142,7 +142,7 @@ public interface IShape {
 }
 ```
 
-[Circle.java](src/main/java/es/uca/iiss/inyeccion/alejandroguitarte/Circle.java)
+[Circle.java](main/src/main/java/es/uca/iiss/inyeccion/alejandroguitarte/Circle.java)
 ```java
 package es.uca.iiss.inyeccion.alejandroguitarte;
 
