@@ -1,11 +1,6 @@
 using System;
 
 public class NullExample{
-    /*private static void invalidNullAssignment(){
-        int number = null;
-        System.Console.WriteLine(number);
-    }*/
-
     private static void validNullAssignment(){
         int? number = null;
         System.Console.WriteLine(number);
@@ -35,7 +30,6 @@ public class NullExample{
     }
 
     public static void Main(string[] args){
-        //invalidNullAssignment();
         validNullAssignment();
         nullableType();
         nullCollation();
